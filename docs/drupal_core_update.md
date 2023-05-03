@@ -18,7 +18,7 @@ Updating core is done via [Composer](https://www.drupal.org/docs/develop/using-c
 
 1. First you will want to verify Drupal Core will update itself and the dependencies. To do so, you run the following command:
     ```docker
-    docker exec -ti esmero-php bash -c "composer update "drupal/core-*:^9" --with-all-dependencies --dry-run
+    docker exec -ti esmero-php bash -c "composer update "drupal/core-*:^9" --with-all-dependencies --dry-run"
     ```
     The `--dry-run` flag will allow you to see what will be updated. Once you review the updates and are ready to go with the full update, you will run the same command without the `dry-run` flag.
 2. Update Core and the dependencies:
