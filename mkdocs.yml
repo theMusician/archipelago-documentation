@@ -2,26 +2,28 @@ site_name: Archipelago Documentation
 site_url: https://docs.archipelago.nyc
 repo_url: https://github.com/esmero/archipelago-documentation
 repo_name: archipelago-documentation
-edit_uri: commits/1.0.0/docs/
+edit_uri: commits/1.3.0/docs/
 site_description: Project documentation for Archipelago.
 site_author: The Digital Services Team at Metropolitan New York Library Council
+extra_css:
+  - stylesheets/extras.css
 nav:
   - Home: index.md
-  - About Archipelago:
+  - Archipelago 101:
     - Archipelago's Philosophy & Guiding Principles: ourtake.md
     - Strawberryfields Forever: strawberryfields.md
     - Metadata in Archipelago: metadatainarchipelago.md
     - Archipelago's File Persistence Strategy: archifilepersistencestrategy.md
     - Software Services: devops.md
-  - Code of Conduct: CODE_OF_CONDUCT.md
   - Instructions and Guides:
     - DevOps & Deployment:
       - Archipelago-Deployment:
         - Start: archipelago-deployment-readme.md
-        - Installing Archipelago Drupal 9 on OSX (macOS): archipelago-deployment-osx.md
-        - Installing Archipelago Drupal 9 on Ubuntu 18.04 or 20.04: archipelago-deployment-ubuntu.md
-        - Installing Archipelago Drupal 9 on Windows 10/11: archipelago-deployment-windows.md
+        - Installing Archipelago Drupal 10 on OSX (macOS): archipelago-deployment-osx.md
+        - Installing Archipelago Drupal 10 on Ubuntu 18.04 or 20.04: archipelago-deployment-ubuntu.md
+        - Installing Archipelago Drupal 10 on Windows 10/11: archipelago-deployment-windows.md
         - Adding Demo Archipelago Digital Objects (ADOs) to your Repository: archipelago-deployment-democontent.md
+        - Upgrading Drupal 9 to Drupal 10 (1.1.0 to 1.3.0): archipelago-deployment-UpgradeDrupalD9toD10.md
         - Upgrading Drupal 8 to Drupal 9 (1.0.0-RC2 to 1.0.0-RC3): archipelago-deployment-upgradeFromD8ToD9.md
         - Upgrading from 1.0.0-RC3 to 1.0.0: archipelago-deployment-upgradeFromRC3.md
         - How to Set Up SSL for Docker/Archipelago: sslsetup.md
@@ -29,6 +31,7 @@ nav:
         - Start: archipelago-deployment-live-readme.md
         - Github Workflow: archipelago-deployment-live-gitworkflow.md
         - Moving from archipelago-deployment to archipelago-deployment-live: archipelago-deployment-live-moveToLive.md
+        - Upgrading Drupal 9 to Drupal 10 (1.1.0 to 1.3.0): archipelago-deployment-live-UpgradeDrupalD9toD10.md  
         - Upgrading Drupal 8 to Drupal 9 (1.0.0-RC2 to 1.0.0-RC3): archipelago-deployment-live-upgradeFromD8ToD9.md
         - Upgrading from 1.0.0-RC3 to 1.0.0: archipelago-deployment-live-upgradeFromRC3.md
         - Updating Docker Containers: archipelago-deployment-live-updatingContainers.md
@@ -38,54 +41,65 @@ nav:
         - Min.io Logging: generalqa_minio_logging.md
         - SMTP Configuration: generalqa_smtp_configuration.md
         - Twig Modules Configuration: generalqa_twig_modules_configuration.md
-    - Archipelago 101:
+    - Site Administration & Configuration:
+      - Strawberryfield Formatters: strawberryfield-formatters.md
+      - Creating Display Modes: createdisplaymodes.md
+      - Archipelago's File Persistence Strategy: archifilepersistencestrategy.md
+      - Strawberry Runners Background/Post-Processing: 
+        - strawberryrunners.md
+        - Pager and OCR Post-processor: strawberryrunners_pager_ocr.md
+        - Webpage Text Post-processor: strawberryrunners_webpage_text.md
+        - WACZ Binary Post-processor: strawberryrunners_wacz_binary.md
+      - Search & Solr:
+        - search_solr_index.md
+        - Setup through Strawberry Key Name Providers: strawberry_key_name_providers.md
+        - Advanced Search: search_advanced.md
+        - Search Within Collections: search-within-collection.md
+      - Fragaria Redirects: fragaria.md
+    - Content and Metadata Tools:
       - Ingesting Your First Object: firstobject.md
       - Webforms in Archipelago:
         - webforms.md
         - How to Create a Webform as an Input Method for Archipelago Digital Objects (ADO): webformsasinput.md
         - Customizing Webforms (Modifying allowable file extensions): modifyingfileextensionsinwebform.md
         - Archipelago Custom Webform Elements: customwebformelements.md
-      - Metadata Display Preview: metadata_display_preview.md
-      - Twig Templates and Archipelago:
-        - metadatatwigs.md
-        - Working With Twig in Archipelago (getting started with custom Twig templates): workingtwigs.md
-        - Twig Recipe Cards for Common Use Cases: twig_recipe_cards.md
-      - Archipelago Multi-Importer (AMI):
-        - ami_index.md
-        - Spreadsheet Formatting Overview: ami_spreadsheet_overview.md
-        - Configuration for Google Sheets API: googleapi.md
-        - Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets: AMIviaSpreadsheets.md
-        - Linked Data Reconciliation: ami_lod_rec.md
-        - Using the Islandora 7 Solr Importer: I7solrImporter.md
-      - Annotations: annotations.md
+        - Using Archipelago's Webform LoD from CSV attached to an ADO suggest: webformLoDfromCSV.md
       - Find and Replace:
         - find_and_replace.md
         - Text Based Find and Replace: find_and_replace_action_text.md
         - Webform Find and Replace: find_and_replace_action_webform.md
-        - JSON Patch Find and Replace: find_and_replace_action_json_patch.md
-    - Site Administration & Configuration:
-      - Strawberryfield Formatters: strawberryfield-formatters.md
-      - Creating Display Modes: createdisplaymodes.md
-      - Archipelago's File Persistence Strategy: archifilepersistencestrategy.md
-      - Strawberry Key Name Providers: strawberry_key_name_providers.md
-    - General Q&A:
-      - generalqa_index.md 
-      - Coming soon: tbd.md
-    - Contributing:
-      - Archipelago Contribution Guide: giveortake.md
-      - Documentation:
-        - documentation_about.md
-        - Documentation Template: documentation_template.md
-        - Additional Features: documentation_features.md
-        - Technical Details: documentation_technical.md
+        - JSON Patch Find and Replace: find_and_replace_action_json_patch.md 
+      - Twig Templates and Archipelago:
+        - metadatatwigs.md
+        - Working With Twig in Archipelago (getting started with custom Twig templates): workingtwigs.md
+        - Twig Recipe Cards for Common Use Cases: twig_recipe_cards.md
+        - Metadata Display Preview: metadata_display_preview.md
+      - Annotations: annotations.md
+    - Archipelago Multi-Importer (AMI):
+      - ami_index.md
+      - Spreadsheet Formatting Overview: ami_spreadsheet_overview.md
+      - Configuration for Google Sheets API: googleapi.md
+      - Ingesting New Digital Objects and Collections using Spreadsheets or Google Sheets: AMIviaSpreadsheets.md
+      - Linked Data Reconciliation: ami_lod_rec.md
+      - AMI Update Sets: ami_update.md
+      - Using the Islandora 7 Solr Importer: I7solrImporter.md
   - Additional Resources:
       - Archipelago Presentations & Events: presentations_events.md
       - Archipelagos in the Wild: inthewild.md
+      - Code of Conduct: CODE_OF_CONDUCT.md
+      - Archipelago Commons Logo Usage Guidelines: archipelag-logo-usage.md    
+      - Contributing Code/Docs:
+        - Archipelago Contribution Guide: giveortake.md
+        - Documentation:
+          - documentation_about.md
+          - Documentation Template: documentation_template.md
+          - Additional Features: documentation_features.md
+          - Technical Details: documentation_technical.md
       - Care & Coding + Fixing / Acknowledgments / License: acknowledgments.md
 theme:
   name: material
-  favicon: images/strawberries_color.png
-  logo: images/strawberries_color.png
+  favicon: images/ArchipelagoLogo-favicon-32x32.png
+  logo: images/ArchipelagoLogo-DumplingFinal2024Web240pxPurpleWhiteText.png
   features:
     - navigation.instant
     - navigation.top
