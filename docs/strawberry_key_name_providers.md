@@ -1,5 +1,5 @@
 ---
-title: Strawberry Key Name Providers
+title: Search and SOLR Setup - Fields and Facets
 tags:
   - Strawberry Key Name Providers
   - Solr
@@ -7,14 +7,30 @@ tags:
   - Search
 ---
 
-# Strawberry Key Name Providers, Solr Field, and Facet Configuration
+# Search and SOLR Setup - Fields and Facets
 
 For an overview of how Strawberry Key Name Providers fit within the context of the rest of Archipelago, please see the [Drupal and JSON](metadatainarchipelago.md#drupal-and-json) section in our [Metadata in Archipelago](metadatainarchipelago.md) overview documentation.
 
+## Strawberry Key Name Providers, Solr Field, and Facet Configuration
 In order to expose the Strawberry Field JSON keys (and values) for Archipelago Digital Objects (ADOs) to Search/Solr, Views, and Facets, we need to make use of a plugin system called *Strawberry Key Name Providers*. The following guide covers
 - Configuring first the *Strawberry Key Name Providers*
 - Then configuring the corresponding Solr Fields necessary for Search and Views exposure
 - Finally, the configuration of Facets and placement of Facet blocks on your theme as needed.
+
+## Setup Quick Links ##
+
+- [Configuring the Strawberry Key Name Providers](#strawberry-key-name-providers-solr-field-and-facet-configuration) (this step may be skipped if you already have Solr
+    - [Creating a Strawberry Key Name Provider](#creating-a-strawberry-key-name-provider)
+    - [Strawberry Key Name Provider Plugins](#strawberry-key-name-provider-plugins)
+        - [Entity Reference JmesPath Strawberry Field Key Name Provider](#entity-reference-jmespath-strawberry-field-key-name-provider)
+        - [Flavor/Embedded JSON Service Strawberry Field Key Name Provider](#flavorembedded-json-service-strawberry-field-key-name-provider)
+        - [JmesPath Strawberry Field Key Name Provider](#jmespath-strawberry-field-key-name-provider)
+        - [JSONLD Strawberry Field Key Name Provider](#jsonld-strawberry-field-key-name-provider)
+- [Creating a Solr Field](#creating-a-solr-field)
+- [Creating a Facet](#creating-a-facet)
+- [Creating a Block for the Facet](#creating-a-block-for-the-facet)
+
+
 
 ## Creating a Strawberry Key Name Provider
 
